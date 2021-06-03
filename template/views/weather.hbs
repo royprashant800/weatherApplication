@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c55374b496.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <!-- Main header -->
+    <div class="container-fluid weather_header">
+        <div class="row">
+            <div class="main_box col-md-4 col-12 mx-auto">
+                <div class="main_content">
+                    <form class="temp_form">
+                        <input type="text" id="cityName" placeholder="Enter your city name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+
+                <div class="tempInformation">
+                    <div class="top_layer">
+                        {{!-- <p id="day">monday</p>
+                        <p id="today_date">10th May</p> --}}
+                    </div>
+                    <div class="main_layer">
+                        <p id="city_name">Get op here</p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp">0 °C</p>
+                            <p id="temp_min_max"><span>Min 0</span><sup>o</sup>C / <span>Max 30</span><sup>o</sup>C</p>
+                            <p id="temp_status" > <i class="fa fa-cloud" aria-hidden="true"></i> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{!-- footer --}}
+    {{>footer}}
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
